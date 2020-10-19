@@ -29,6 +29,7 @@
     }],
     "webItems": [{
       "key": "webitem-with-weight-popup",
+      "url": "/hello.html",
       "name": {
         "value": "Webitem With Weight"
       },
