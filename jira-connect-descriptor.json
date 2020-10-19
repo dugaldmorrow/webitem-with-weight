@@ -1,0 +1,56 @@
+{
+  "key": "webitem-with-weight",
+  "name": "Webitem With Weight",
+  "description": "https://community.developer.atlassian.com/t/web-item-weight-not-allowing-integers-in-connect-json/41948",
+  "vendor": {
+    "name": "Dugald Morrow",
+    "url": "https://github.com/dugaldmorrow/webitem-with-weight"
+  },
+  "baseUrl": "https://dugaldmorrow.github.io/webitem-with-weight",
+  "links": {
+    "self": "https://dugaldmorrow.github.io/webitem-with-weight/confluence-connect-descriptor.json",
+    "homepage": "https://dugaldmorrow.github.io/webitem-with-weight/"
+  },
+  "authentication": {
+    "type": "none"
+  },
+  "scopes": ["READ"],
+  "modules": {
+    "dialogs": [{
+      "key": "webitem-with-weight-dialog",
+      "url": "/hello.html",
+      "cacheable": true,
+      "options": {
+        "size": "large",
+        "header": {
+          "value": "Hello"
+        }
+      }
+    }],
+    "webItems": [{
+      "key": "webitem-with-weight-popup",
+      "name": {
+        "value": "Webitem With Weight"
+      },
+      "tooltip": {
+        "value": "Webitem With Weight"
+      },
+      "location": "jira.navigator.pluggable.items",
+      "weight": 30,
+      "context": "addon",
+      "target": {
+        "type": "dialog",
+        "options": {
+          "key": "webitem-with-weight-dialog",
+          "width": "500px",
+          "height": "300px"
+        }
+      },
+      "icon": {
+        "width": 16,
+        "height": 16,
+        "url": "/icon.png"
+      }
+    }]
+  }
+}
